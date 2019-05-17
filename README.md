@@ -1,3 +1,4 @@
+
 # PWA: Next JS + Redux + Redux persist + redux-devtools-extension + Bootstrap starter
 
 > A progressive web app starter with NextJS, redux and bootstrap
@@ -7,6 +8,21 @@
 <a target='_blank' href='https://react-redux-nextjs-bootstrap-pwa-starter-nfxmkkccof.now.sh'>
 ![preview](./preview.png)
 </a>
+
+## Layout structuing & UI implementation. | PRRNB
+
+**PRRNB**
+
+P: PWA | Progressive Web App
+
+R: React
+
+R: Redux
+
+N: NextJs
+
+B: ReactStrap | Bootstrap 4.0
+
 
 ## Lighthouse tests
 
