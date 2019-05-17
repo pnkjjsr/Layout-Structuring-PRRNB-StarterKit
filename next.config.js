@@ -1,5 +1,7 @@
 // #region imports
 const withOffline = require('next-offline');
+const withSass = require('@zeit/next-sass')
+
 // #endregion
 
 // next.config.js
@@ -8,14 +10,22 @@ const nextConfig = {
   dontAutoRegisterSw: true, // since we want runtime registration
 
   /* static page export options: */
-  exportPathMap: function() {
+  exportPathMap: function () {
     return {
-      '/': { page: '/' },
-      '/login': { page: '/login' },
-      '/page1': { page: '/page1' },
-      '/private1': { page: '/private1' },
+      '/': {
+        page: '/'
+      },
+      '/login': {
+        page: '/login'
+      },
+      '/page1': {
+        page: '/page1'
+      },
+      '/private1': {
+        page: '/private1'
+      },
     };
   },
 };
 
-module.exports = withOffline(nextConfig);
+module.exports = withSass(withOffline(nextConfig));

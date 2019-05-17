@@ -2,9 +2,13 @@
 /* eslint-disable quotes */
 
 // #region imports
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import Head from 'next/head';
 import theme from '../../config/theme';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
+
+import './layout.scss'
 // #endregion
 
 // #region flow types
@@ -57,9 +61,9 @@ function Layout({ children }: Props) {
   useEffect(() => registerBeforeinstallprompt());
 
   return (
-    <div>
+    <Fragment>
       <Head>
-        <title>Next PWA Starter</title>
+        <title>Next PRRNB Starter</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
 
@@ -68,16 +72,11 @@ function Layout({ children }: Props) {
           href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.2.1/cosmo/bootstrap.min.css"
         />
 
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-
         <meta
           name="application-name"
           content="react-redux-nextjs-bootstrap-pwa-starter"
         />
+
         <link rel="manifest" href="static/manifest.json" />
 
         <link
@@ -86,12 +85,14 @@ function Layout({ children }: Props) {
           sizes="32x32"
           href="static/favicon-32x32.png"
         />
+
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
           href="static/favicon-16x16.png"
         />
+
         <meta name="theme-color" content={accent} />
 
         <link
@@ -117,7 +118,7 @@ function Layout({ children }: Props) {
         {/* <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> */}
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
       </Head>
-      <Styles />
+
       <noscript>
         <div className="alert  alert-warning">
           <h4>Warning!</h4>
@@ -128,29 +129,15 @@ function Layout({ children }: Props) {
           </p>
         </div>
       </noscript>
+
+      <Header />
       {children}
       <div dangerouslySetInnerHTML={{ __html: flexibilityJsForIE }} />
-    </div>
+      <Footer />
+    </Fragment>
   );
 }
 
 Layout.displayName = 'Layout';
-
-// #region styles
-function Styles() {
-  return (
-    <style jsx global>
-      {`
-        body {
-        }
-
-        .navbar {
-          border-radius: 0;
-        }
-      `}
-    </style>
-  );
-}
-// #endregion
 
 export default Layout;

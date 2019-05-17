@@ -1,14 +1,13 @@
 // @flow
 
 // #region imports
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import compose from 'recompose/compose';
 import Container from 'reactstrap/lib/Container';
 import * as fakeFetchActions from '../redux/modules/fakeModuleWithFetch';
 import * as userAuthActions from '../redux/modules/userAuth';
-import Header from '../components/header/Header';
 import Jumbotron from 'reactstrap/lib/Jumbotron';
 import Button from 'reactstrap/lib/Button';
 import Router from 'next/router';
@@ -65,8 +64,7 @@ class Index extends PureComponent<Props, State> {
   // #region component lifecycle methods
   render() {
     return (
-      <div>
-        <Header />
+      <Fragment>
         <Container fluid>
           <Jumbotron>
             <h1>PWA: Next JS + Redux + Bootstrap STARTER</h1>
@@ -75,7 +73,7 @@ class Index extends PureComponent<Props, State> {
             </Button>
           </Jumbotron>
         </Container>
-      </div>
+      </Fragment>
     );
   }
   // #endregion

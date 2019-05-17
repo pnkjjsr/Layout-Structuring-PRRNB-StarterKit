@@ -2,7 +2,7 @@
 /* eslint-disable quotes */
 
 // #region imports
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import compose from 'recompose/compose';
@@ -77,7 +77,7 @@ class Login extends PureComponent<Props, State> {
     const { isLogging } = this.props;
 
     return (
-      <div>
+      <Fragment>
         <Container fluid>
           <Row>
             <Col md={{ size: 4, offset: 4 }} xs={{ size: 10, offset: 1 }}>
@@ -101,7 +101,7 @@ class Login extends PureComponent<Props, State> {
                           placeholder="Email"
                           value={email}
                           onChange={this.handlesOnEmailChange}
-                          // onInput={this.handlesOnEmailChange} // browser autofill would not fire onChange
+                        // onInput={this.handlesOnEmailChange} // browser autofill would not fire onChange
                         />
                       </Col>
                     </div>
@@ -121,7 +121,7 @@ class Login extends PureComponent<Props, State> {
                           placeholder="Password"
                           value={password}
                           onChange={this.handlesOnPasswordChange}
-                          // onInput={this.handlesOnPasswordChange} // browser autofill would not fire onChange
+                        // onInput={this.handlesOnPasswordChange} // browser autofill would not fire onChange
                         />
                       </Col>
                     </div>
@@ -140,8 +140,8 @@ class Login extends PureComponent<Props, State> {
                               <i className="fa fa-spinner fa-pulse fa-fw" />
                             </span>
                           ) : (
-                            <span>Login</span>
-                          )}
+                              <span>Login</span>
+                            )}
                         </Button>
                       </Col>
                     </div>
@@ -160,35 +160,35 @@ class Login extends PureComponent<Props, State> {
                   </fieldset>
                 </form>
               ) : (
-                <Alert color="danger" toggle={this.handleAlertDismiss}>
-                  <h4>
-                    <i
-                      className="fa fa-exclamation-triangle"
-                      aria-hidden="true"
-                    />{' '}
-                    &nbsp; Cookies are disabled on your browser!
+                  <Alert color="danger" toggle={this.handleAlertDismiss}>
+                    <h4>
+                      <i
+                        className="fa fa-exclamation-triangle"
+                        aria-hidden="true"
+                      />{' '}
+                      &nbsp; Cookies are disabled on your browser!
                   </h4>
-                  <br />
-                  <p>
-                    Cookies are necessary to ensure application delivers the
-                    best experience and security.
+                    <br />
+                    <p>
+                      Cookies are necessary to ensure application delivers the
+                      best experience and security.
                   </p>
-                  <p>
-                    {`You can't signin or signout this application until you enable cookie in your navigator.`}
-                  </p>
-                  <br />
-                  <p>
-                    <Button color="primary" onClick={this.handleAlertDismiss}>
-                      Back to Home
+                    <p>
+                      {`You can't signin or signout this application until you enable cookie in your navigator.`}
+                    </p>
+                    <br />
+                    <p>
+                      <Button color="primary" onClick={this.handleAlertDismiss}>
+                        Back to Home
                     </Button>
-                  </p>
-                </Alert>
-              )}
+                    </p>
+                  </Alert>
+                )}
             </Col>
           </Row>
         </Container>
         <Styles />
-      </div>
+      </Fragment>
     );
   }
   // #endregion

@@ -87,7 +87,7 @@ function _prepareNextApplication() {
             return _context.stop();
         }
       }
-    }, _callee, this, [[0, 9]]);
+    }, _callee, null, [[0, 9]]);
   }));
   return _prepareNextApplication.apply(this, arguments);
 }

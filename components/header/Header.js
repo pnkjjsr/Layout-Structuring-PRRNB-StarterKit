@@ -39,7 +39,7 @@ function Header({ isAuthenticated, disconnectUser }: Props) {
   return (
     <>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">react-redux-next-bootstrap starter</NavbarBrand>
+        <NavbarBrand href="/">PRRNB</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
