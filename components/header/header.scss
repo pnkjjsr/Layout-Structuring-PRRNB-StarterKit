@@ -1,0 +1,48 @@
+.header {
+  background-color: #eee;
+
+  .logo {
+    padding: 10px 10px 0;
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .logo a {
+    color: #f44336;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+
+  .nav {
+    float: right;
+    position: relative;
+
+    .menu {}
+
+    .links {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      right: -15px;
+      top: 33px;
+      min-width: 100px;
+      padding: 5px 10px;
+      background-color: #eee;
+
+      a {
+        color: #000;
+
+        &:hover {
+          color: #2196f3;
+        }
+      }
+    }
+
+    &:hover .links {
+      display: block;
+    }
+  }
+}

@@ -42,6 +42,7 @@ function Footer({ isAuthenticated, disconnectUser }: Props) {
           width: 100%;
           background-color: #000;
           color: #607D8B;
+          text-align: center;
         }
       `}
       </style>

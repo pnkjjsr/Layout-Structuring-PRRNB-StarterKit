@@ -72,6 +72,12 @@ function Layout({ children }: Props) {
           href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.2.1/cosmo/bootstrap.min.css"
         />
 
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+
         <meta
           name="application-name"
           content="react-redux-nextjs-bootstrap-pwa-starter"

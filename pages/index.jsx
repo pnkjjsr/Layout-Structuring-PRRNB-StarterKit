@@ -5,12 +5,15 @@ import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import compose from 'recompose/compose';
-import Container from 'reactstrap/lib/Container';
 import * as fakeFetchActions from '../redux/modules/fakeModuleWithFetch';
 import * as userAuthActions from '../redux/modules/userAuth';
-import Jumbotron from 'reactstrap/lib/Jumbotron';
-import Button from 'reactstrap/lib/Button';
+
+import Link from 'next/link';
 import Router from 'next/router';
+
+import { Container } from 'reactstrap';
+import { Nav, NavItem } from 'reactstrap';
+
 // #endregion
 
 // #region flow types
@@ -65,13 +68,43 @@ class Index extends PureComponent<Props, State> {
   render() {
     return (
       <Fragment>
-        <Container fluid>
-          <Jumbotron>
-            <h1>PWA: Next JS + Redux + Bootstrap STARTER</h1>
-            <Button color="primary" onClick={this.goLogin}>
-              login
-            </Button>
-          </Jumbotron>
+
+        <Container>
+          <h1>
+            PRRNB
+          </h1>
+
+          <p>
+            P : Progressive Web App | PWA
+            <br />
+            R : React
+            <br />
+            R : Redux
+            <br />
+            N : NextJs
+            <br />
+            B : Bootstrap | Scss
+          </p>
+
+          <hr />
+
+          <Nav>
+            <NavItem>
+              <Link href="/login">
+                <a className="nav-link">Login</a>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link href="/page1">
+                <a className="nav-link">Page 1</a>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link href="/private1">
+                <a className="nav-link">Private 2</a>
+              </Link>
+            </NavItem>
+          </Nav>
         </Container>
       </Fragment>
     );
