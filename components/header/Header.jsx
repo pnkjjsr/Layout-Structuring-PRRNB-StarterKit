@@ -57,7 +57,7 @@ function Header({ isAuthenticated, disconnectUser }: Props) {
             <Col>
               <div className="logo">
                 <Link href="/">
-                  <a>Logo</a>
+                  <a>PRRNB</a>
                 </Link>
               </div>
             </Col>
