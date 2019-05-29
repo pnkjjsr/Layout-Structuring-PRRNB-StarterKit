@@ -8,7 +8,7 @@ import compose from 'recompose/compose';
 import Button from 'reactstrap/lib/Button';
 import Router from 'next/router';
 import Container from 'reactstrap/lib/Container';
-import * as userAuthActions from '../redux/modules/userAuth';
+import * as userAuthActions from '../../redux/modules/userAuth';
 // #endregion
 
 // #region flow types

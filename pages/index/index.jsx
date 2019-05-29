@@ -5,14 +5,16 @@ import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import compose from 'recompose/compose';
-import * as fakeFetchActions from '../redux/modules/fakeModuleWithFetch';
-import * as userAuthActions from '../redux/modules/userAuth';
+import * as fakeFetchActions from '../../redux/modules/fakeModuleWithFetch';
+import * as userAuthActions from '../../redux/modules/userAuth';
 
 import Link from 'next/link';
 import Router from 'next/router';
 
 import { Container } from 'reactstrap';
 import { Nav, NavItem } from 'reactstrap';
+
+import './style.scss';
 
 // #endregion
 
@@ -69,7 +71,7 @@ class Index extends PureComponent<Props, State> {
     return (
       <Fragment>
 
-        <Container>
+        <Container className="mt-5">
           <h1>
             PRRNB
           </h1>
@@ -83,7 +85,7 @@ class Index extends PureComponent<Props, State> {
             <br />
             N : NextJs
             <br />
-            B : Bootstrap | Scss
+            B : ReactStrap | Bootstrap | Scss
           </p>
 
           <hr />

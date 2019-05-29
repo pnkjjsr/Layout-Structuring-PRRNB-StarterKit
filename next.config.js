@@ -10,12 +10,12 @@ const nextConfig = {
   dontAutoRegisterSw: true, // since we want runtime registration
 
   /* static page export options: */
-  exportPathMap: function () {
+  exportPathMap: async function (defaultPathMap) {
     return {
       '/': {
         page: '/'
       },
-      '/login': {
+      '/login/': {
         page: '/login'
       },
       '/page1': {

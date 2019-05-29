@@ -6,14 +6,14 @@ import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import compose from 'recompose/compose';
-import * as userAuthActions from '../redux/modules/userAuth';
+import * as userAuthActions from '../../redux/modules/userAuth';
 import Router, { withRouter } from 'next/router';
 import Container from 'reactstrap/lib/Container';
 import Button from 'reactstrap/lib/Button';
 import Row from 'reactstrap/lib/Row';
 import Col from 'reactstrap/lib/Col';
 import Alert from 'reactstrap/lib/Alert';
-import auth from '../services/auth';
+import auth from '../../services/auth';
 // #endregion
 
 // #region flow types

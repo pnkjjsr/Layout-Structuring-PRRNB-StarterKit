@@ -8,8 +8,8 @@ import compose from 'recompose/compose';
 import Router, { withRouter } from 'next/router';
 import Container from 'reactstrap/lib/Container';
 import Button from 'reactstrap/lib/Button';
-import * as userAuthActions from '../redux/modules/userAuth';
-import Private from '../components/privateRoute/PrivateRoute';
+import * as userAuthActions from '../../redux/modules/userAuth';
+import Private from '../../components/privateRoute/PrivateRoute';
 // #endregion
 
 // #region flow types
